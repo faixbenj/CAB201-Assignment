@@ -19,7 +19,34 @@ namespace WindowsFormsApplication1
         
         private void button1_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult result = MessageBox.Show("Do you want to quit?",
+                                                    "Quit",
+                                                    MessageBoxButtons.YesNo,
+                                                    MessageBoxIcon.Error);
+            if (result == DialogResult.Yes)
+            {
+                Close();
+            };
         }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+
+            if (radioButton1.Checked)
+            {
+                Pig_Game_Form GameForm = new Pig_Game_Form();
+                GameForm.Show();
+                radioButton1.Checked = false;
+            }else if (radioButton2.Checked)
+            {
+                pigWithTwoDiceForm GameForm = new pigWithTwoDiceForm();
+                GameForm.Show();
+                radioButton2.Checked = false;
+            }
+            
+                        
+        }
+
     }
 }
