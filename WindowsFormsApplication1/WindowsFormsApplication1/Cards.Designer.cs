@@ -51,8 +51,10 @@
         "Solitare",
         "Twenty-One"};
             this.comboBox1.FormattingEnabled = true;
-            
-          
+            this.comboBox1.Items.AddRange(new object[] {
+            "",
+            "Solitare",
+            "Twenty-One"});
             this.comboBox1.Location = new System.Drawing.Point(72, 52);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
@@ -81,9 +83,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(127, 175);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(28, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "label3";
+            this.label3.Text = "Test";
             // 
             // Cards
             // 
